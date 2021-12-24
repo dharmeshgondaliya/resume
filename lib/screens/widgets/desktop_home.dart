@@ -27,15 +27,29 @@ class DesktopHome extends StatelessWidget {
           style: TextStyle(fontSize: 16),
         ),
         const SizedBox(height: 15),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            SocialMedia(img: 'asset/facebook.png', url: ''),
-            SocialMedia(img: 'asset/linkedin.png', url: ''),
-            SocialMedia(img: 'asset/email.png', url: ''),
-            SocialMedia(img: 'asset/github.png', url: ''),
-            SocialMedia(img: 'asset/youtube.png', url: ''),
-          ],
+        SizedBox(
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              SocialMedia(
+                  img: 'asset/facebook.png',
+                  url: 'https://www.facebook.com/gondaliya.dharmesh.12'),
+              SocialMedia(
+                  img: 'asset/linkedin.png',
+                  url: 'https://www.linkedin.com/in/dharmeshgondaliya'),
+              SocialMedia(
+                  img: 'asset/email.png',
+                  url: 'mailto:gondaliyadharmesh2@gmail.com'),
+              SocialMedia(
+                  img: 'asset/github.png',
+                  url: 'https://github.com/dharmeshgondaliya'),
+              SocialMedia(
+                  img: 'asset/youtube.png',
+                  url:
+                      'https://www.youtube.com/channel/UClYSORlVwlCjhJ8BWO1p4LA'),
+            ],
+          ),
         ),
       ],
     );

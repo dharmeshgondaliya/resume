@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resume/screens/desktop_view.dart';
+import 'package:resume/screens/mobile_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: "Dharmesh",
         color: Colors.black,
         child: const SafeArea(
-          child: DesktopView(),
+          child: MobileView(),
         ),
       ),
     );
