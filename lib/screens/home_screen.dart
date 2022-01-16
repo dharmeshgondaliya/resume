@@ -10,14 +10,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  Size size = Size.zero;
+
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
     return Scaffold(
       body: Title(
         title: "Dharmesh",
-        color: Colors.black,
-        child: const SafeArea(
-          child: MobileView(),
+        color: Colors.lightBlue,
+        child: SafeArea(
+          child: size.width > 480 ? const DesktopView() : const MobileView(),
         ),
       ),
     );

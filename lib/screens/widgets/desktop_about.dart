@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:resume/screens/widgets/education.dart';
 import 'package:resume/screens/widgets/experience.dart';
+import 'package:resume/screens/widgets/experiences.dart';
 import 'package:resume/screens/widgets/lable.dart';
 import 'package:resume/screens/widgets/skil_item.dart';
 
@@ -48,7 +50,10 @@ class DesktopAbout extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Lable(lable: "Skils"),
+                      const Lable(
+                        lable: "Skils",
+                        img: 'asset/skills (1).png',
+                      ),
                       const SizedBox(height: 15),
                       Row(
                         children: const [
@@ -79,7 +84,8 @@ class DesktopAbout extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Lable(lable: "language"),
+                      const Lable(
+                          lable: "language", img: 'asset/languages.png'),
                       const SizedBox(height: 15),
                       Row(
                         children: const [
@@ -103,77 +109,53 @@ class DesktopAbout extends StatelessWidget {
             const SizedBox(height: 40),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: const [
-                          Icon(Icons.cast_for_education_outlined, size: 15),
-                          SizedBox(width: 5),
-                          Lable(lable: "Education"),
-                        ],
-                      ),
-                      const SizedBox(height: 15),
-                      ClipRRect(
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(5),
-                        ),
-                        child: Container(
-                          color: Colors.white,
-                          child: Column(
-                            children: const [
-                              Experience(
-                                date: "2017",
-                                title: "HSC Commerce",
-                                description: "V.H.Khetani Vinay Mandir Morvada",
-                              ),
-                              SizedBox(height: 10),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10),
-                                child: Divider(),
-                              ),
-                              SizedBox(height: 10),
-                              Experience(
-                                date: "2017 - 2020",
-                                title: "BCA",
-                                description:
-                                    "S.S.S.D.I.I.T Gurukul Collage Junagadh",
-                              )
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                  child: Education(size: 10),
                 ),
-                const SizedBox(width: 40),
+                SizedBox(width: 40),
                 Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: const [
-                          Icon(Icons.work, size: 15),
-                          SizedBox(width: 5),
-                          Lable(lable: "Experience"),
-                        ],
-                      ),
-                      const SizedBox(height: 15),
-                      const ClipRRect(
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                        child: Experience(
-                            date: "January 2021",
-                            title: "Apptrait Solutions",
-                            description:
-                                "Worked with technologies like Android and Flutter."),
-                      )
-                    ],
-                  ),
+                  child: Experiences(),
                 )
               ],
-            )
+            ),
+            const SizedBox(height: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Lable(
+                  lable: "Area of Interest",
+                  img: 'asset/hobbies.png',
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Expanded(
+                      child: Row(
+                        children: const [
+                          Expanded(child: SkilItem(text: "Coding")),
+                          SizedBox(width: 10),
+                          Expanded(
+                              child: SkilItem(text: "Software Development")),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 40),
+                    Expanded(
+                      child: Row(
+                        children: const [
+                          Expanded(child: SkilItem(text: "Listening Song")),
+                          SizedBox(width: 10),
+                          Expanded(child: SizedBox())
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 30)
           ],
         ),
       ),

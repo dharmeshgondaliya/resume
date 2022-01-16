@@ -20,9 +20,18 @@ class Menus extends StatelessWidget {
                 const SizedBox(height: 40),
                 InkWell(
                   onTap: () => callback(0),
-                  child: const Text(
-                    "Dharmesh",
-                    style: TextStyle(fontSize: 30),
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                    decoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(width: 0.2, color: Colors.lightBlue),
+                      ),
+                    ),
+                    child: const Text(
+                      "Dharmesh",
+                      style: TextStyle(fontSize: 30),
+                    ),
                   ),
                 )
               ],

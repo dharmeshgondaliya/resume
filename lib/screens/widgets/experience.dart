@@ -28,7 +28,7 @@ class Experience extends StatelessWidget {
               Text(date)
             ],
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 20),
           Text(
             title,
             style: const TextStyle(fontWeight: FontWeight.bold),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resume/screens/widgets/social_media.dart';
 
+import '../../utils.dart';
+
 class DesktopHome extends StatelessWidget {
   const DesktopHome({Key? key}) : super(key: key);
 
@@ -12,8 +14,8 @@ class DesktopHome extends StatelessWidget {
         ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(250)),
           child: Image.asset(
-            'asset/gd.png',
-            height: 250,
+            'asset/gd1.png',
+            height: 200,
           ),
         ),
         const SizedBox(height: 20),
@@ -31,24 +33,9 @@ class DesktopHome extends StatelessWidget {
           height: 50,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              SocialMedia(
-                  img: 'asset/facebook.png',
-                  url: 'https://www.facebook.com/gondaliya.dharmesh.12'),
-              SocialMedia(
-                  img: 'asset/linkedin.png',
-                  url: 'https://www.linkedin.com/in/dharmeshgondaliya'),
-              SocialMedia(
-                  img: 'asset/email.png',
-                  url: 'mailto:gondaliyadharmesh2@gmail.com'),
-              SocialMedia(
-                  img: 'asset/github.png',
-                  url: 'https://github.com/dharmeshgondaliya'),
-              SocialMedia(
-                  img: 'asset/youtube.png',
-                  url:
-                      'https://www.youtube.com/channel/UClYSORlVwlCjhJ8BWO1p4LA'),
-            ],
+            children: socialMedias
+                .map((e) => SocialMedia(img: e['image'], url: e['url']))
+                .toList(),
           ),
         ),
       ],

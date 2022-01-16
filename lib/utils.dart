@@ -1,36 +1,42 @@
 List steps = [
   {
-    'image': "asset/trivia_logo.png",
-    'title': "TriviaMaker",
-    'subtitle': 'https://play.google.com/store/apps/details?id=com.triviamaker'
+    'title': "Stock Management & Billing",
+    'subtitle': "Desktop Application",
+    'database': 'Ms Access',
+    'technology': ['c#'],
+    'functionality': [
+      'Authentication',
+      'Product Key',
+      'Admin management',
+      'User Management',
+      'Database Managemet',
+      'Bill Printing',
+    ]
   },
   {
-    'image': "asset/serp.png",
-    'title': "SERP Checker",
-    'subtitle':
-        'https://play.google.com/store/apps/details?id=com.apptrait.SERP'
+    'title': "ChatMe",
+    'subtitle': "Android Application",
+    'database': 'MySql',
+    'technology': ['Android (Java)', 'PHP'],
+    'functionality': [
+      'Ui Design',
+      'User Authentication',
+      'Api Binding',
+      'PHP Api',
+      'Database Management'
+    ]
   },
+];
+
+List socialMedias = [
   {
-    'image': "asset/conversation.jpg",
-    'title': "English Conversation",
-    'subtitle':
-        'https://play.google.com/store/apps/details?id=apptrait.english.conversation'
+    'image': 'asset/linkedin.png',
+    'url': 'https://www.linkedin.com/in/dharmeshgondaliya'
   },
+  {'image': 'asset/email.png', 'url': 'mailto:gondaliyadharmesh2@gmail.com'},
+  {'image': 'asset/github.png', 'url': 'https://github.com/dharmeshgondaliya'},
   {
-    'image': "asset/movie.png",
-    'title': "Guess This Movie",
-    'subtitle':
-        'https://play.google.com/store/apps/details?id=com.apptrait.movieGuessGame'
-  },
-  {
-    'image': "asset/unit.png",
-    'title': "Unit Converter",
-    'subtitle':
-        'https://play.google.com/store/apps/details?id=com.apptrait.converter'
-  },
-  {
-    'image': "asset/qreader.jpg",
-    'title': "QR Code & bar Code Scanner",
-    'subtitle': 'https://play.google.com/store/apps/details?id=com.reader.free'
+    'image': 'asset/youtube.png',
+    'url': 'https://www.youtube.com/channel/UClYSORlVwlCjhJ8BWO1p4LA'
   },
 ];
